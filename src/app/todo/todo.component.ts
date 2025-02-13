@@ -7,4 +7,6 @@ import { ListTodoComponent } from './list-todo/list-todo.component';
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.scss',
 })
-export class TodoComponent {}
+export class TodoComponent {
+
+}

@@ -1,11 +1,29 @@
 <main class="my-4">
-  <div class="flex gap-2 flex-wrap w-full">
-    <input type="text" class="border p-3 md:w-5/6 rounded-lg  flex-auto" />
-    <button
-      type="button"
-      class="px-6 py-3 bg-[#3b82f6] md:w-1/6 text-[#fff] flex-auto rounded-lg"
-    >
-      Add
-    </button>
+  <div class="flex flex-wrap w-full">
+    <div class="sm:w-5/6">
+      <input
+        type="text"
+        [(ngModel)]="newTodo"
+        class="border p-3 rounded-lg w-[100%]"
+      />
+    </div>
+    <div class="sm:w-1/6 pl-2">
+      <button
+        type="button"
+        (click)="addTodo()"
+        class="px-2 py-3 bg-[#3b82f6] text-[#fff] rounded-lg w-[100%] flex justify-center items-center"
+        [disabled]="isLoading"
+      >
+        <img
+          *ngIf="isLoading"
+          src="../../../assets/icons/loader.svg"
+          alt="loader"
+          width="20px"
+          height="20px"
+          class="mr-2"
+        />
+        <span *ngIf="!isLoading">Add</span>
+      </button>
+    </div>
   </div>
 </main>

@@ -25,3 +25,13 @@ body {
 p {
   margin: 0;
 }
+
+input {
+  outline: none;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

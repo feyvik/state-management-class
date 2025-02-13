@@ -1,1 +1,32 @@
-<p>list-todo works!</p>
+<div
+  *ngFor="let todo of todoList$ | async"
+  class="flex gap-3 w-[100%] items-center py-2"
+>
+  <input
+    type="checkbox"
+    [checked]="todo.completed"
+    (change)="toggle(todo.id)"
+    class="cursor-pointer"
+  />
+  <div
+    [ngStyle]="{
+      'text-decoration': todo.completed ? 'line-through' : 'none',
+      color: todo.completed ? 'gray' : 'black'
+    }"
+    class="w-[90%]"
+  >
+    {{ todo.title }}
+  </div>
+  <button
+    type="button"
+    (click)="remove(todo.id)"
+    class="bg-red-500 p-1 rounded-md"
+  >
+    <img
+      src="../../../assets/icons/trash-2.svg"
+      alt="trash"
+      width="24px"
+      height="24px"
+    />
+  </button>
+</div>
