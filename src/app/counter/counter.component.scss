@@ -1,0 +1,30 @@
+main {
+  background-color: #b26336;
+  height: 100vh;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter_container {
+  height: 200px;
+  width: 400px;
+  background-color: #ffffff;
+  color: #b26336;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.counter_header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.counter_text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
